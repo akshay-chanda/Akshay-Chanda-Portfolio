@@ -243,6 +243,10 @@ button {
   transition: 0.5s;
 }
 
+.see-more-btn {
+  display: none;
+}
+
 /* ------------------------------
    Skills Section
 ------------------------------ */
@@ -294,7 +298,7 @@ button {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   padding-top: 20px;
   justify-content: center;
   align-items: center;
@@ -304,16 +308,43 @@ button {
 .project-card {
   position: relative;
   overflow: hidden;
-  scale: 1; opacity: 0;
+  opacity: 0;
+  transform: translateY(50px);
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem var(--bg-color);
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: 100px 450px;
+  animation: fadeInUp 1s forwards;
 }
 
-@keyframes fade-in {
-  to {scale: 1; opacity: 1;}
+/* Staggered delays so cards appear one after another */
+.project-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.project-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.project-card:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.project-card:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-card img {
@@ -339,10 +370,6 @@ button {
   transition: transform 0.4s ease;
   padding: 2rem;
   text-align: center;
-}
-
-@keyframes fade-in {
-  to {scale: 1; opacity: 1;}
 }
 
 .project-card:hover .project-info {
@@ -371,50 +398,105 @@ button {
   font-size: 2rem;
 }
 
+
 /* ------------------------------
-   Services Section
+   Experiences Section
 ------------------------------ */
-.services h2 {
+/* Timeline Section */
+#experiences {
+  background: var(--bg-color);
   text-align: center;
+}
+
+#experiences h2 {
   font-size: 6rem;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
+  position: relative;
 }
 
-.service-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.timeline {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-.service-box {
-  background: var(--second-bg-color);
-  border: .2rem solid var(--bg-color);
-  flex: 1 1 25rem;
-  padding: 3rem;
-  border-radius: 1.5rem;
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  background: var(--main-color);
+  transform: translateX(-50%);
+  height: 0; /* start hidden */
+  animation: drawLine 1.5s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Keyframes to animate line from top to bottom */
+@keyframes drawLine {
+  to {
+    height: 100%;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
   text-align: center;
-  transition: 0.4s ease;
-  scale: 1; opacity: 0;
-  animation: fade-in 2s linear forwards;
-  animation-timeline: view();
-  animation-range: 100px 450px;
 }
 
-.service-box h3 {
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
+.timeline-item:nth-child(even) {
+  left: 50%;
 }
 
-.service-box p {
+.timeline-content {
+  background: var(--second-bg-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+.timeline-item:nth-child(1) .timeline-content {
+  animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(2) .timeline-content {
+  animation-delay: 0.4s;
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px;
+  font-size: 2.1rem;
+}
+
+.timeline-content h4 {
+  margin: 0 0 10px;
+  color: #777;
   font-size: 1.5rem;
-  margin-bottom: 4rem;
 }
 
-.service-box:hover {
-  transform: scale(1.05);
-  border-color: var(--main-color);
-  box-shadow: 0 0 0.8rem var(--main-color);
+.timeline-content p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ------------------------------
@@ -445,10 +527,42 @@ button {
   overflow: hidden;
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem var(--bg-color);
-  scale: 1; opacity: 0;
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: 100px 450px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Staggered animation delays */
+.certificate-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.certificate-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.certificate-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.certificate-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.certificate-card:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.certificate-card:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .certificate-card img {
@@ -504,6 +618,7 @@ button {
   font-size: 2rem;
 }
 
+
 /* ------------------------------
    Contact Section
 ------------------------------ */
@@ -521,13 +636,23 @@ button {
 
 .input-row {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.1rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 
-.input-row input,
+.input-row input{
+  height: 50px;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  background: var(--second-bg-color);
+  color: var(--text-color);
+  border-radius: .8rem;
+}
+
 .contact textarea {
+  height: 240px;
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
@@ -1050,6 +1175,7 @@ button {
   }
 
   .project-list {
+    grid-template-columns: 1fr;
     padding-top: 10px;
   }
 
@@ -1065,82 +1191,136 @@ button {
 }
 
 /* ------------------------------
-  Services Section
+  Experiences Section
 ------------------------------ */
 
-/* Tablets: smaller heading & tighter gap */
+/* Tablet view (max-width: 1200px) - keep same two-column design */
 @media (max-width: 1200px) {
-  .services {
-    padding: 8rem 5% 4rem;
+  #experiences {
+    padding: 60px 20px;
   }
 
-  .services h2 {
+  #experiences h2 {
     font-size: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
   }
 
-  .service-list {
-    gap: 1.8rem;
+  .timeline {
+    padding: 0;
+    max-width: 90%; /* slightly narrower to fit tablet */
   }
 
-  .service-box h3 {
-    font-size: 3.2rem;
+  .timeline-item {
+    padding: 15px 25px;
   }
 
-  .service-box p {
-    font-size: 2rem;
-  }
-}
-
-/* Large mobiles: single column cards, smaller text */
-@media (max-width: 768px) {
-  .services h2 {
-    font-size: 5.5rem;
-    margin-bottom: 4rem;
+  .timeline-content {
+    padding: 18px;
   }
 
-  .service-list {
-    flex-direction: column;
-    padding: 0px 8px;
-    /* width: 75%; */
-    gap: 2.5rem;
+  .timeline-content h3 {
+    font-size: 1.9rem;
   }
 
-  .service-box {
-    flex: 1 1 100%;
-    padding: 2.5rem;
+  .timeline-content h4 {
+    font-size: 1.5rem;
   }
 
-  .service-box h3 {
-    font-size: 3.2rem;
-  }
-
-  .service-box p {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-  }
-}
-
-/* Small mobiles: adjust heading & text */
-@media (max-width: 480px) {
-  .services h2 {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-  }
-
-  .service-list {
-    padding: 0px;
-  }
-
-  .service-box {
-    padding: 2rem;
-  }
-
-  .service-box h3 {
-    font-size: 2.7rem;
-  }
-
-  .service-box p {
+  .timeline-content p {
     font-size: 1.4rem;
+  }
+}
+
+/* Small tablets & large phones (max-width: 768px)*/
+@media (max-width: 768px) {
+  #experiences {
+    padding: 50px 15px;
+  }
+
+  #experiences h2 {
+    font-size: 5.5rem;
+    margin-top: 2.9rem;
+    margin-bottom: 5rem;
+  }
+
+  .timeline {
+    max-width: 100%;
+  }
+
+  /* Hide the vertical timeline line */
+  .timeline::before {
+    display: none;
+  }
+
+  /* Make timeline items full width and stacked vertically */
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: center;
+    padding: 10px 30px;
+  }
+
+  .timeline-content {
+    padding: 16px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.9rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-content p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 480px) {
+  #experiences {
+    padding: 40px 10px;
+  }
+
+  #experiences h2 {
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .timeline {
+    max-width: 100%;
+  }
+
+  /* Hide the vertical timeline line */
+  .timeline::before {
+    display: none;
+  }
+
+  /* Make timeline items full width, stacked vertically */
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: center;
+    padding: 10px 15px;
+  }
+
+  .timeline-content {
+    padding: 12px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.4rem;
+  }
+
+  .timeline-content p {
+    font-size: 1.3rem;
   }
 }
 
@@ -1289,6 +1469,7 @@ button {
   }
 
   .contact textarea {
+    height: 150px;
     margin-bottom: 1.5rem;
   }
 }
