@@ -353,6 +353,7 @@ button {
 }
 
 .project-card:hover img {
+  filter: blur(1.5px);
   transform: scale(1.1);
 }
 
@@ -571,6 +572,7 @@ button {
 }
 
 .certificate-card:hover img {
+  filter: blur(1.5px);
   transform: scale(1.1);
 }
 
