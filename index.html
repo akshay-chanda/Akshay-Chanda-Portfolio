@@ -4,301 +4,227 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akshay Chanda | Web Developer</title>
+  <meta name="description" content="Akshay Chanda — Web Developer specializing in responsive websites and engaging user interfaces using HTML, CSS, and JavaScript. View projects, skills, certificates, and contact details.">
   <link rel="icon" href="My Images/web_icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- --------Header--------- -->
+  <header class="header">
+    <div class="nav-left">
+      <img src="My Images/folio_logo_nav.png" alt="Logo">
+      <span class="logo">Portfolio.</span>
+    </div>
 
-<!-- --------Header--------- -->
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
 
-<header class="header">
-  <div class="nav-left">
-    <img src="My Images/folio_logo_nav.png" alt="Logo">
-    <span class="logo">Portfolio.</span>
-  </div>
+    <nav class="nav_right" id="nav-menu">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <!-- Overlay for mobile sidebar -->
+  <div id="overlay" class="overlay"></div>
 
-  <nav class="nav_right" id="nav-menu">
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skill">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experiences">Experiences</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- --------Home Section--------- -->
+  <main>
+    <section id="home" class="home">
+      <div class="content">
+        <h3>Hello, it's me</h3>
+        <h1>AKSHAY CHANDA</h1>
+        <h3>And I'm a <span class="highlight">Web Developer</span></h3>
+        <p>I'm a Web Developer with 1 year of experience. Expertise in creating responsive websites and engaging user interfaces.</p>
 
-<!-- --------Home Section--------- -->
+        <div class="social-media">
+          <a href="https://facebook.com/akshay.chanda.10" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://instagram.com/the_real.aqshay" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/akshay-chanda" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/akshay-chanda-052353276" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
 
-<main>
-  <section id="home" class="home">
-    <div class="content">
-      <h3>Hello, it's me</h3>
-      <h1>AKSHAY CHANDA</h1>
-      <h3>And I'm a <span class="highlight">Web Developer</span></h3>
-      <p>I'm a Web Developer with 1 year of experience. Expertise in creating responsive websites and engaging user interfaces.</p>
-      <div class="social-media">
-        <a href="https://facebook.com/akshay.chanda.10" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://instagram.com/the_real.aqshay" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://github.com/akshay-chanda" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/akshay-chanda-052353276" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <div class="btn-group">
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="./Documents/Resume of Akshay Chanda.pdf" download="Resume" class="btn">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
-      <div class="btn-group">
-        <a href="#contact" class="btn">Hire Me</a>
-        <a href="./Documents/Resume of Akshay Chanda.pdf" download="Resume" class="btn">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+      <div class="home-img">
+        <img src="My Images/folio_img1.png" alt="Akshay Chanda">
       </div>
-    </div>
-    <div class="home-img">
-      <img src="My Images/folio_img1.png" alt="Akshay Chanda">
-    </div>
-  </section>
+    </section>
 
-<!-- --------About Section--------- -->
+    <!-- --------About Section--------- -->
+    <section id="about" class="about">
+      <div class="about-img reveal">
+        <img src="My Images/folio_img2.png" alt="About Me">
+      </div>
+      <div class="about-content reveal">
+        <h2>About <span class="highlight">Me!</span></h2>
+        <p>Hello! My name is AKSHAY CHANDA, and I am a passionate web developer with 1 year of experience in building dynamic, user-friendly websites. I specialize in front-end development with expertise in HTML, CSS, and JavaScript.</p>
+        <span class="more-text">
+          <p>My journey in web development started with a curiosity for how websites work and a desire to create visually appealing and functional digital experiences. Over the years, I have honed my skills by working on a diverse range of projects, from small business websites to large-scale websites.</p>
+          <p>In the ever-evolving field of web development, I aim to stay ahead of the curve by embracing new trends and best practices. My goal is to create seamless and engaging web experiences that not only look great but also perform efficiently across all devices.</p>
+        </span>
+        <button class="see-more-btn">See more</button>
+      </div>
+    </section>
 
-  <section id="about" class="about">
-    <div class="about-img">
-      <img src="My Images/folio_img2.png" alt="About Me">
-    </div>
-    <div class="about-content">
-      <h2>About <span class="highlight">Me!</span></h2>
-      <p>Hello! My name is AKSHAY CHANDA, and I am a passionate web developer with 1 year of experience in building dynamic, user-friendly websites. I specialize in front-end development with expertise in HTML, CSS, and JavaScript.</p>
-      <span class="more-text">
-        <p>My journey in web development started with a curiosity for how websites work and a desire to create visually appealing and functional digital experiences. Over the years, I have honed my skills by working on a diverse range of projects, from small business websites to large-scale websites.</p>
-        <p>In the ever-evolving field of web development, I aim to stay ahead of the curve by embracing new trends and best practices. My goal is to create seamless and engaging web experiences that not only look great but also perform efficiently across all devices.</p>
-      </span>
-       <button class="see-more-btn">See more</button>
-    </div>
-  </section>
+    <!-- --------Skills Section--------- -->
+    <section id="skill" class="skills">
+      <h2>My <span class="highlight">Skills</span></h2>
+      <div class="skills-container">
+        <div class="skill-item reveal"><img src="Skills/html_logo.png" alt="HTML"></div>
+        <div class="skill-item reveal"><img src="Skills/css_logo.png" alt="CSS"></div>
+        <div class="skill-item reveal"><img src="Skills/js_logo.png" alt="JavaScript"></div>
+        <div class="skill-item reveal"><img src="Skills/react_logo.png" alt="React"></div>
+        <div class="skill-item reveal"><img src="Skills/c_logo.png" alt="C"></div>
+        <div class="skill-item reveal"><img src="Skills/c++_logo.png" alt="C++"></div>
+        <div class="skill-item reveal"><img src="Skills/java_logo.png" alt="Java"></div>
+      </div>
+    </section>
 
-<!-- --------Skills Section--------- -->
+    <!-- --------Project--------- -->
+    <section id="projects" class="projects">
+      <h2>Latest <span class="highlight">Projects</span></h2>
 
-  <section id="skill" class="skills">
-    <h2>My <span class="highlight">Skills</span></h2>
-    <div class="skills-container">
-      <div class="skill-item"><img src="Skills/html_logo.png" alt="HTML"></div>
-      <div class="skill-item"><img src="Skills/css_logo.png" alt="CSS"></div>
-      <div class="skill-item"><img src="Skills/js_logo.png" alt="JavaScript"></div>
-      <div class="skill-item"><img src="Skills/react_logo.png" alt="React"></div>
-      <div class="skill-item"><img src="Skills/c_logo.png" alt="C"></div>
-      <div class="skill-item"><img src="Skills/c++_logo.png" alt="C++"></div>
-      <div class="skill-item"><img src="Skills/java_logo.png" alt="Java"></div>
-    </div>
-  </section>
+      <div class="project-list">
+        <div class="project-card reveal">
+          <img src="Projects Thumbnail/spotify_clone_img.png" alt="Spotify Clone">
+          <div class="project-info">
+            <h4>Spotify Clone</h4>
+            <p>Responsive clone using HTML and CSS, replicating Spotify's sidebar, albums, and player UI.</p>
+            <div class="links">
+              <a href="https://github.com/akshay-chanda/Spotify-Clone" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://akshay-chanda-spotify-clone.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
 
-<!-- --------Project--------- -->
+        <div class="project-card reveal">
+          <img src="Projects Thumbnail/netflix_clone_img.png" alt="Netflix Landing Page">
+          <div class="project-info">
+            <h4>Netflix Landing Page </h4>
+            <p>Built a responsive Netflix landing page using HTML, CSS, and JS featuring hero section, navigation bar, and interactive movie/show sections.</p>
+            <div class="links">
+              <a href="https://github.com/akshay-chanda/Netflix-Landing-Page" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://akshay-chanda-netflix-landing-page.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
 
-  <section id="projects" class="projects">
-    <h2>Latest <span class="highlight">Projects</span></h2>
-    <div class="project-list">
-      <div class="project-card">
-        <img src="Projects Thumbnail/spotify_clone_img.png" alt="Spotify Clone">
-        <div class="project-info">
-          <h4>Spotify Clone</h4>
-          <p>Responsive clone using HTML and CSS, replicating Spotify's sidebar, albums, and player UI.</p>
-          <div class="links">
-            <a href="https://github.com/akshay-chanda/Spotify-Clone" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://akshay-chanda-spotify-clone.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <div class="project-card reveal">
+          <img src="Projects Thumbnail/Calculator-img.png" alt="Calculator">
+          <div class="project-info">
+            <h4>Calculator </h4>
+            <p>I created a simple, interactive calculator using HTML, CSS, and JavaScript that performs basic arithmetic with a clean, responsive design.</p>
+            <div class="links">
+              <a href="https://github.com/akshay-chanda/Calculator" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://akshay-chanda-calculator.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <img src="Projects Thumbnail/amazon-clone-img.png" alt="Amazon-Clone">
+          <div class="project-info">
+            <h4>Amazon-Clone </h4>
+            <p>I built an Amazon clone using HTML and CSS to improve my front-end skills. It replicates the layout and design of Amazon’s homepage.</p>
+            <div class="links">
+              <a href="https://github.com/akshay-chanda/Amazon-Clone" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://akshay-chanda-amazon-clone.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="Projects Thumbnail/netflix_clone_img.png" alt="Netflix Landing Page">
-        <div class="project-info">
-          <h4>Netflix Landing Page </h4>
-          <p>Built a responsive Netflix landing page using HTML, CSS, and JS featuring hero section, navigation bar, and interactive movie/show sections.</p>
-          <div class="links">
-            <a href="https://github.com/akshay-chanda/Netflix-Landing-Page" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://akshay-chanda-netflix-landing-page.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <!-- --------Experiences Section--------- -->
+    <section id="experiences" class="reveal">
+      <h2>My <span class="highlight">Experiences</span></h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content reveal">
+            <h3>Web Development Intern</h3>
+            <h4>Codsoft | Jul 2025 - Aug 2025</h4>
+            <p>I worked as a Web Development intern at Codsoft, where I built projects using HTML, CSS, and JavaScript to strengthen my frontend development skills.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content reveal">
+            <h3>Web Development Intern</h3>
+            <h4>VaultofCodes | Aug 2025 - Present</h4>
+            <p>I worked as a Web Development intern at VaultofCodes, where I built projects using HTML, CSS, and JavaScript to strengthen my frontend development skills.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="Projects Thumbnail/Calculator-img.png" alt="Calculator">
-        <div class="project-info">
-          <h4>Calculator </h4>
-          <p>I created a simple, interactive calculator using HTML, CSS, and JavaScript that performs basic arithmetic with a clean, responsive design.</p>
-          <div class="links">
-            <a href="https://github.com/akshay-chanda/Calculator" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://akshay-chanda-calculator.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <!-- --------Certificates Section--------- -->
+    <section id="certificates" class="certificates">
+      <h2>My <span class="highlight">Certificates</span></h2>
+      <div class="certificate-list">
+        <div class="certificate-card reveal">
+          <img src="Certificates/Certificate 1.png" alt="Programming with C++ Certificate">
+          <div class="certificate-info">
+            <h4>Programming with C++</h4>
+            <p>I successfully completed the Programming with C++ course on Coursera, strengthening my skills in object-oriented programming and problem-solving.</p>
+            <div class="links">
+              <a href="Certificates/Certificate 1.pdf" target="_blank" aria-label="View"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="certificate-card reveal">
+          <img src="Certificates/Certificate 2.png" alt="C++ Tic-Tac-Toe Certificate">
+          <div class="certificate-info">
+            <h4>Built a TIC-TAC-TOE Game using C++</h4>
+            <p>Completed Introduction to C++ Programming on Coursera by building a TIC-TAC-TOE game.</p>
+            <div class="links">
+              <a href="Certificates/Certificate 2.pdf" target="_blank" aria-label="View"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="Projects Thumbnail/amazon-clone-img.png" alt="Amazon-Clone">
-        <div class="project-info">
-          <h4>Amazon-Clone </h4>
-          <p>I built an Amazon clone using HTML and CSS to improve my front-end skills. It replicates the layout and design of Amazon’s homepage.</p>
-          <div class="links">
-            <a href="https://github.com/akshay-chanda/Amazon-Clone" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://akshay-chanda-amazon-clone.vercel.app/" target="_blank" aria-label="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
+    <!-- --------Contact Section--------- -->
+    <section id="contact" class="contact">
+      <h2>Contact <span class="highlight">Me!</span></h2>
+      <form name="submit-to-google-sheet">
+        <div class="input-row">
+          <input type="text" name="Name" placeholder="Full name" required>
+          <input type="email" name="Email" placeholder="Email address" required>
         </div>
-      </div>
-    </div>
-  </section>
-
-<!-- --------Experiences Section--------- -->
-
-  <section id="experiences">
-    <h2>My <span class="highlight">Experiences</span></h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h3>Web Development Intern</h3>
-          <h4>Codsoft | Jul 2025 - Aug 2025</h4>
-          <p>I worked as a Web Development intern at Codsoft, where I built projects using HTML, CSS, and JavaScript to strengthen my frontend development skills.</p>
+        <div class="input-row">
+          <input type="tel" name="Number" placeholder="Mobile number" required>
+          <input type="text" name="Email Subject" placeholder="Email subject" required>
         </div>
-      </div>
+        <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <span id="msg"></span>
+    </section>
+  </main>
 
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h3>Web Development Intern</h3>
-          <h4>VaultofCodes | Aug 2025 - Present</h4>
-          <p>I worked as a Web Development intern at VaultofCodes, where I built projects using HTML, CSS, and JavaScript to strengthen my frontend development skills.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- --------Footer Section--------- -->
+  <footer class="footer">
+    <p>&copy; AKSHAY CHANDA | All Rights Reserved</p>
+    <a href="#home" class="scroll-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+  </footer>
 
-
-<!-- --------Certificates Section--------- -->
-
-  <section id="certificates" class="certificates">
-    <h2>My <span class="highlight">Certificates</span></h2>
-    <div class="certificate-list">
-      <div class="certificate-card">
-        <img src="Certificates/Certificate 1.png" alt="Certificate 1">
-        <div class="certificate-info">
-          <h4>Programming with C++</h4>
-          <p>I successfully completed the Programming with C++ course on Coursera, strengthening my skills in object-oriented programming and problem-solving.</p>
-          <div class="links">
-            <a href="Certificates/Certificate 1.pdf" target="_blank" aria-label="View"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="certificate-card">
-        <img src="Certificates/Certificate 2.png" alt="Certificate 2">
-        <div class="certificate-info">
-          <h4>Built a TIC-TAC-TOE Game using C++</h4>
-          <p>Completed Introduction to C++ Programming on Coursera by building a TIC-TAC-TOE game.</p>
-          <div class="links">
-            <a href="Certificates/Certificate 2.pdf" target="_blank" aria-label="View"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- --------Contact Section--------- -->
-
-  <section id="contact" class="contact">
-    <h2>Contact <span class="highlight">Me!</span></h2>
-    <form name="submit-to-google-sheet">
-      <div class="input-row">
-        <input type="text" name="Name" placeholder="Full name" required>
-        <input type="email" name="Email" placeholder="Email address" required>
-      </div>
-      <div class="input-row">
-        <input type="tel" name="Number" placeholder="Mobile number" required>
-        <input type="text" name="Email Subject" placeholder="Email subject" required>
-      </div>
-      <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <span id="msg"></span>
-  </section>
-</main>
-
-<!-- --------Footer Section--------- -->
-
-<footer class="footer">
-  <p>&copy; AKSHAY CHANDA | All Rights Reserved</p>
-  <a href="#home" class="scroll-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
-</footer>
-
-<!-- --------JavaScript Section--------- -->
-
-<!-- --------Function Contact Form--------- -->
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwRbz8nrvIm7Eolg_PS4syWX8J22Yx0y2KXR5DTGpQSxpdhygsHtYEQ8XUad8_2ywMScg/exec';
-  const form = document.forms['submit-to-google-sheet'];
-  const msg = document.getElementById('msg');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(() => {
-        msg.textContent = "Message sent successfully!";
-        setTimeout(() => msg.textContent = "", 3000);
-        form.reset();
-      })
-    .catch(error => console.error('Error!', error.message));
-  });
-</script>
-
-<!-- --------Functional Menu Bar for Smaller Screen--------- -->
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-  const overlay = document.getElementById('overlay');
-
-  function openSidebar() {
-    hamburger.classList.add('active');
-    navMenu.classList.add('active');
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // lock scroll
-  }
-
-  function closeSidebar() {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = ''; // unlock scroll
-  }
-
-  hamburger.addEventListener('click', () => {
-    if(navMenu.classList.contains('active')){
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
-  });
-
-  overlay.addEventListener('click', closeSidebar);
-
-  // Auto close when clicking nav links
-  document.querySelectorAll('.nav_right ul li a').forEach(link => {
-    link.addEventListener('click', closeSidebar);
-  });
-</script>
-
-<!-- --------Functional Hidden Lines in About--------- -->
-
-<script>
-  const btn = document.querySelector('.see-more-btn');
-  const moreText = document.querySelector('.more-text');
-
-  btn.addEventListener('click', () => {
-    if (moreText.style.display === "inline") {
-      moreText.style.display = "none";
-      btn.textContent = "See more";
-    } else {
-      moreText.style.display = "inline";
-      btn.textContent = "See less";
-    }
-  });
-</script>
+  <!-- --------JavaScript Section--------- -->
+  <script src="script.js"></script>
+  
 </body>
 </html>
